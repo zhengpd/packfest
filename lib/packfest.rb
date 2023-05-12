@@ -6,9 +6,17 @@ require "packfest/rubygems"
 module Packfest
   def self.install_all
     Log.info("Start working...")
-    Homebrew.install_all
-    Nixpkgs.install_all
-    Rubygems.install_all
+    Homebrew::Installer.run
+    Nixpkgs::Installer.run
+    Rubygems::Installer.run
+    Log.info("DONE.")
+  end
+
+  def self.upgrade_all
+    Log.info("Start upgrading packages...")
+    Homebrew::Upgrader.run
+    Nixpkgs::Upgrader.run
+    Rubygems::Upgrader.run
     Log.info("DONE.")
   end
 end

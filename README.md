@@ -19,6 +19,9 @@ cp example-packfest.yaml ~/.config/packfest.yaml
 
 # edit packfest.yaml and then install all packages with
 packfest install
+
+# upgrade outdated packages in packfest.yaml
+packfest upgrade
 ```
 
 Package sources of `packfest.yaml`:
