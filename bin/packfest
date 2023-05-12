@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+require "dry/cli"
+require "packfest"
+
+module Packfest
+  module Commands
+    extend Dry::CLI::Registry
+
+    class Install < Dry::CLI::Command
+      def call(*)
+        Packfest.install_all
+      end
+    end
+
+    register "install", Install
+  end
+end
+
+Dry::CLI.new(Packfest::Commands).call

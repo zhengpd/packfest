@@ -1,0 +1,11 @@
+---
+packages:
+  brew_formulae:
+    - fd
+    - ripgrep
+
+  nixpkgs:
+    - nixpkgs-fmt
+
+  rubygems:
+    - pry
